@@ -4,7 +4,6 @@ import { Product } from "./product";
 const ProductItem = (props: Product) => {
   return (
     <React.Fragment>
-      {/* <div className="arrivals_slider_item"> */}
       <div className="border_active"></div>
       <div className="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
         <div className="product_image d-flex flex-column align-items-center justify-content-center">
@@ -47,7 +46,6 @@ const ProductItem = (props: Product) => {
           <li className="product_mark product_new">new</li>
         </ul>
       </div>
-      {/* </div> */}
     </React.Fragment>
   );
 };

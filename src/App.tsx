@@ -14,6 +14,9 @@ import Adverts from "./theme/Adverts";
 import Trends from "./theme/Adverts";
 import Reviews from "./theme/Reviews";
 
+
+
+
 function App() {
   return (
     <div className="App">

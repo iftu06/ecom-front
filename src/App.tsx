@@ -11,11 +11,10 @@ import Banner2 from "./theme/Banner2";
 import NewArrival from "./theme/NewArrival";
 import BestSeller from "./theme/BestSeller";
 import Adverts from "./theme/Adverts";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 import Trends from "./theme/Adverts";
 import Reviews from "./theme/Reviews";
-
-
-
 
 function App() {
   return (

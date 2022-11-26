@@ -17,9 +17,11 @@ const ProductItem = (props: Product) => {
   return (
     <React.Fragment>
       <CustomModal
-        render={() => <ProductModal name={props.name} image={props.image}></ProductModal>}
+        render={() => (
+          <ProductModal name={props.name} image={props.image}></ProductModal>
+        )}
         modalHeader="Add Product"
-        showModal={isModalOpen}
+        show={isModalOpen}
         hideModal={hideModal}
       ></CustomModal>
       <div className="border_active"></div>

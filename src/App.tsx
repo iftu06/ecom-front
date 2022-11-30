@@ -15,20 +15,25 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import Trends from "./theme/Adverts";
 import Reviews from "./theme/Reviews";
+import Home from "./home/home";
+import { Redirect, Route, Switch } from "react-router-dom";
+import Menu from "./menu/menu";
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <Banner />
-      <Charecteristics />
-      {/* <Deals /> */}
-      <PopularCatg />
-      <Banner2 />
-      <NewArrival />
-      <BestSeller />
-      <Trends />
-      <Reviews />
+      <Switch>
+        <Route path="/" exact>
+          <Redirect to="/home" />
+        </Route>
+        <Route path="/home">
+          <Home />
+        </Route>
+        <Route path="/menu">
+          <Menu />
+        </Route>
+      </Switch>
       <Footer />
     </div>
   );

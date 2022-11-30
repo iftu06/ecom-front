@@ -200,28 +200,9 @@ const Header = () => {
           <div className="row">
             <div className="col">
               <div className="main_nav_content d-flex flex-row">
-                {/* Categories Menu */}
-
-                <Categories />
-
-                {/* Main Nav Menu */}
-
-                {/* Menu Trigger */}
-
+                
                 <NavBar />
 
-                {/* <div className="menu_trigger_container ml-auto">
-                  <div className="menu_trigger d-flex flex-row align-items-center justify-content-end">
-                    <div className="menu_burger">
-                      <div className="menu_trigger_text">menu</div>
-                      <div className="cat_burger menu_burger_inner">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                      </div>
-                    </div>
-                  </div>
-                </div> */}
               </div>
             </div>
           </div>

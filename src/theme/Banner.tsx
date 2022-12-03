@@ -3,10 +3,7 @@ import React from "react";
 const Banner = () => {
   return (
     <div className="banner">
-      <div
-        className="banner_background"
-        // style="background-image:url(images/banner_background.jpg)"
-      ></div>
+      <div className="banner_background"></div>
       <div className="container fill_height">
         <div className="row fill_height">
           <div className="banner_product_image">

@@ -23,7 +23,7 @@ const Header = () => {
                 </div>
                 <a href="mailto:fastsales@gmail.com">fastsales@gmail.com</a>
               </div>
-              <div className="top_bar_content ml-auto">
+              <div className="top_bar_content ms-auto">
                 <div className="top_bar_menu">
                   <ul className="standard_dropdown top_bar_dropdown">
                     <li>
@@ -200,7 +200,7 @@ const Header = () => {
           <div className="row">
             <div className="col">
               <div className="main_nav_content d-flex flex-row">
-                
+
                 <NavBar />
 
               </div>

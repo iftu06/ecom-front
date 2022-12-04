@@ -39,13 +39,6 @@ const NewArrival = () => {
 
   //const [products, setProducts] = useState<Product[]>([] as Product[]);
 
-  // const fetchProducts = async () => {
-  //   const response = await fetch("http://localhost:3004/products");
-  //   const prodJson = await response.json();
-  //   console.log(prodJson);
-  //   setProducts(await prodJson);
-  // };
-
   // useEffect(() => {
   //   fetch("http://localhost:3004/products")
   //     .then((response) => response.json())
@@ -56,42 +49,44 @@ const NewArrival = () => {
   // }, []);
 
   return (
-    <div className="new_arrivals">
-      <div className="container">
-        <div className="row">
-          <div className="col">
-            <div className="tabbed_container">
-              <div className="tabs clearfix tabs-right">
-                <div className="new_arrivals_title">Hot New Arrivals</div>
-                <ul className="clearfix">
-                  <li className="active" key="feature">
-                    Featured
-                  </li>
-                  <li key="audio">Audio & Video</li>
-                  <li key="vedio">Laptops & Computers</li>
-                </ul>
-                <div className="tabs_line">
-                  <span></span>
+    <React.Fragment>
+      <div className="new_arrivals">
+        <div className="container">
+          <div className="row">
+            <div className="col">
+              <div className="tabbed_container">
+                <div className="tabs clearfix tabs-right">
+                  <div className="new_arrivals_title">Hot New Arrivals</div>
+                  <ul className="clearfix">
+                    <li className="active" key="feature">
+                      Featured
+                    </li>
+                    <li key="audio">Audio & Video</li>
+                    <li key="vedio">Laptops & Computers</li>
+                  </ul>
+                  <div className="tabs_line">
+                    <span></span>
+                  </div>
                 </div>
-              </div>
-              <div className="row">
-                <div className="col-lg-9">
-                  <div className="product_panel panel active">
-                    <div className="arrivals_slider slider">
-                      <Slider {...settings}>
-                        {products.map((product) => {
-                          return (
-                            <ProductItem
-                              key={product.id}
-                              name={product.name}
-                              image={product.image}
-                              price={product.price}
-                            />
-                          );
-                        })}
-                      </Slider>
+                <div className="row">
+                  <div className="col-lg-9">
+                    <div className="product_panel panel active">
+                      <div className="arrivals_slider slider">
+                        <Slider {...settings}>
+                          {products.map((product) => {
+                            return (
+                              <ProductItem
+                                key={product.id}
+                                name={product.name}
+                                image={product.image}
+                                price={product.price}
+                              />
+                            );
+                          })}
+                        </Slider>
+                      </div>
+                      <div className="arrivals_slider_dots_cover"></div>
                     </div>
-                    <div className="arrivals_slider_dots_cover"></div>
                   </div>
                 </div>
               </div>
@@ -99,7 +94,7 @@ const NewArrival = () => {
           </div>
         </div>
       </div>
-    </div>
+    </React.Fragment>
   );
 };
 

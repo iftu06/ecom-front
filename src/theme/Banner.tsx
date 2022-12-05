@@ -6,8 +6,10 @@ const Banner = () => {
       <div className="banner_background"></div>
       <div className="container fill_height">
         <div className="row fill_height">
-          <div className="banner_product_image">
-            <img src="images/banner_product.png" alt="" />
+          <div className="col-md-12">
+            <div className="banner_product_image">
+              <img src="images/banner_product.png" alt="" />
+            </div>
           </div>
           <div className="col-lg-5 offset-lg-4 fill_height">
             <div className="banner_content">

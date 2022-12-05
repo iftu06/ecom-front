@@ -48,10 +48,10 @@ const PopularCatg = () => {
               <div className="popular_categories_title">Popular Categories</div>
               <div className="popular_categories_slider_nav">
                 <div className="popular_categories_prev popular_categories_nav">
-                  <i className="fas fa-angle-left ml-auto"></i>
+                  <i className="fas fa-angle-left ms-auto"></i>
                 </div>
                 <div className="popular_categories_next popular_categories_nav">
-                  <i className="fas fa-angle-right ml-auto"></i>
+                  <i className="fas fa-angle-right ms-auto"></i>
                 </div>
               </div>
               <div className="popular_categories_link">
@@ -62,7 +62,7 @@ const PopularCatg = () => {
 
           <div className="col-lg-9">
             <div className="popular_categories_slider_container">
-              <div className="owl-carousel owl-theme popular_categories_slider">
+              <div className="owl-carousel owl-theme popular_categories_slider owl-loaded owl-drag">
                 {categories.map((catgegory) => {
                   return (
                     <CategoryItem

@@ -9,6 +9,7 @@ const CategoryItem = (props: Category) => {
           <img src={props.image} alt="" />
         </div>
         <div className="popular_category_text">{props.name}</div>
+        {/* //Test */}
       </div>
     </div>
   );

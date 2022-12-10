@@ -1,6 +1,6 @@
-import { CartItem } from "./cart_item";
+import CartItem from "./cart_item";
 
-export interface Car {
+export default interface Cart {
   id?: number;
   items: CartItem[];
   totQuantity?: number;

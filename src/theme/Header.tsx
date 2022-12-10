@@ -1,11 +1,57 @@
-import React from "react";
-import Categories from "./Categories";
+import React, { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { authActions } from "../auth/auth-reducer";
+import SignIn from "../auth/sign-in";
+import SignUp from "../auth/sign-up";
+import CustomModal from "../common/custom-modal";
 import NavBar from "./Navbar";
 
 const Header = () => {
+  const dispatch = useDispatch();
+
+  const isAuthenticated: boolean = useSelector(
+    (state: any) => state?.auth?.isAuthenticated
+  );
+
+  const isSignInModalOpen: boolean = useSelector(
+    (state: any) => state?.auth?.isSignInModalOpen
+  );
+
+  const isSignUpModalOpen: boolean = useSelector(
+    (state: any) => state?.auth?.isSignUpModalOpen
+  );
+
+  const hideSignInModal = () => {
+    dispatch(authActions.hideSignInModal());
+  };
+
+  const showSignInModal = () => {
+    dispatch(authActions.showSignInModal());
+  };
+
+  const hideSignUpModal = () => {
+    dispatch(authActions.hideSignUpModal());
+  };
+
+  const showSignUpModal = () => {
+    dispatch(authActions.showSignUpModal());
+  };
+
   return (
     <header className="header">
-      {/* Top Bar */}
+      <CustomModal
+        render={() => <SignIn />}
+        modalHeader="Sign In"
+        show={isSignInModalOpen}
+        hideModal={hideSignInModal}
+      ></CustomModal>
+
+      <CustomModal
+        render={() => <SignUp />}
+        modalHeader="Sign Up"
+        show={isSignUpModalOpen}
+        hideModal={hideSignUpModal}
+      ></CustomModal>
 
       <div className="top_bar">
         <div className="container">
@@ -64,12 +110,27 @@ const Header = () => {
                   <div className="user_icon">
                     <img src="images/user.svg" alt="" />
                   </div>
-                  <div>
-                    <a href="#">Register</a>
-                  </div>
-                  <div>
-                    <a href="#">Sign in</a>
-                  </div>
+                  {!isAuthenticated && (
+                    <React.Fragment>
+                      <div>
+                        <a href="#" onClick={showSignUpModal}>
+                          Register
+                        </a>
+                      </div>
+                      <div>
+                        <a href="#" onClick={showSignInModal}>
+                          Sign in
+                        </a>
+                      </div>
+                    </React.Fragment>
+                  )}
+                  {isAuthenticated && (
+                    <React.Fragment>
+                      <div>
+                        <a href="#">Sign Out</a>
+                      </div>
+                    </React.Fragment>
+                  )}
                 </div>
               </div>
             </div>
@@ -202,7 +263,6 @@ const Header = () => {
               <div className="main_nav_content d-flex flex-row">
 
                 <NavBar />
-
               </div>
             </div>
           </div>

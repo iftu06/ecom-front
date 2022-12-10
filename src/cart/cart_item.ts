@@ -1,8 +1,10 @@
-export interface CartItem {
+interface CartItem {
   id?: number;
   name?: string;
   description?: string;
   image?: string;
-  quantity? : number;
-  
+  quantity: number;
+  price : number;
 }
+
+export default CartItem;

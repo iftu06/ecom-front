@@ -19,6 +19,7 @@ import Home from "./home/home";
 import { useSelector } from 'react-redux';
 import { Redirect, Route, Switch } from "react-router-dom";
 import Menu from "./menu/menu";
+import ProductCart from "./product/productCart";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
           <Menu />
         </Route>
       </Switch>
+      <ProductCart />
       <Footer />
     </div>
   );

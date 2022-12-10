@@ -15,7 +15,7 @@ const Adverts = () => {
                   Lorem ipsum dolor sit amet, consectetur adipiscing Donec et.
                 </div>
               </div>
-              <div className="ml-auto">
+              <div className="ms-auto">
                 <div className="advert_image">
                   <img src="images/adv_1.png" alt="" />
                 </div>
@@ -36,7 +36,7 @@ const Adverts = () => {
                   Lorem ipsum dolor sit amet, consectetur.
                 </div>
               </div>
-              <div className="ml-auto">
+              <div className="ms-auto">
                 <div className="advert_image">
                   <img src="images/adv_2.png" alt="" />
                 </div>
@@ -56,7 +56,7 @@ const Adverts = () => {
                   Lorem ipsum dolor sit amet, consectetur.
                 </div>
               </div>
-              <div className="ml-auto">
+              <div className="ms-auto">
                 <div className="advert_image">
                   <img src="images/adv_3.png" alt="" />
                 </div>

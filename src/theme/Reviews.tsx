@@ -8,7 +8,7 @@ const Reviews = () => {
           <div className="col">
             <div className="reviews_title_container">
               <h3 className="reviews_title">Latest Reviews</h3>
-              <div className="reviews_all ml-auto">
+              <div className="reviews_all ms-auto">
                 <a href="#">
                   view all <span>reviews</span>
                 </a>

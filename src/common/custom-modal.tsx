@@ -5,7 +5,7 @@ const CustomModal = (props: any) => {
   const [show, setShow] = useState(false);
   return (
     <>
-      <Modal show={props.show} onHide={props.hideModal} backdrop="static">
+      <Modal show={props.show} onHide={props.hideModal} backdrop="static" className="modal-xl">
         <Modal.Header closeButton>
           <Modal.Title>{props.modalHeader}</Modal.Title>
         </Modal.Header>

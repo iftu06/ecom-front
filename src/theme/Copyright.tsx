@@ -22,7 +22,7 @@ const Copyright = () => {
                 </a>
                 {/* Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. */}
               </div>
-              <div className="logos ml-sm-auto">
+              <div className="logos ms-sm-auto">
                 <ul className="logos_list">
                   <li>
                     <a href="#">

@@ -16,7 +16,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Trends from "./theme/Adverts";
 import Reviews from "./theme/Reviews";
 import Home from "./home/home";
-import {useSelector} from 'react-redux';
+import { useSelector } from 'react-redux';
 import { Redirect, Route, Switch } from "react-router-dom";
 import Menu from "./menu/menu";
 

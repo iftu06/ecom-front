@@ -20,10 +20,10 @@ const Trends = () => {
               </div>
               <div className="trends_slider_nav">
                 <div className="trends_prev trends_nav">
-                  <i className="fas fa-angle-left ml-auto"></i>
+                  <i className="fas fa-angle-left ms-auto"></i>
                 </div>
                 <div className="trends_next trends_nav">
-                  <i className="fas fa-angle-right ml-auto"></i>
+                  <i className="fas fa-angle-right ms-auto"></i>
                 </div>
               </div>
             </div>

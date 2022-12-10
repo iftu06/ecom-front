@@ -1,9 +1,9 @@
 import React from "react";
 import { Category } from "../category/category";
-const categories : Category[] = [
+const categories: Category[] = [
   {
     name: "Computers & Laptops",
-    class: "fas fa-chevron-right ml-auto",
+    class: "fas fa-chevron-right ms-auto",
   },
   {
     name: "Cameras & Photos",

@@ -1,0 +1,13 @@
+.image_list li {
+    max-width: 10rem;
+    display: inline-block;
+    margin-right: 2rem;
+}
+
+/* .image_list li:last-child {
+    margin-right: 0;
+} */
+
+.image_list {
+    margin: 1rem 0;
+}

@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <div className="main_nav_menu ml-auto">
+    <div className="main_nav_menu ms-auto">
       <ul className="standard_dropdown main_nav_dropdown">
         <li>
           <NavLink to="/home">Home</NavLink>

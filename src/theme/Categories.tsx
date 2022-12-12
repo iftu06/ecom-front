@@ -48,13 +48,14 @@ const Categories = () => {
 
   return (
     <div className="cat_menu_container">
-      <div className="cat_menu_title d-flex flex-row align-items-center justify-content-start">
-        <div className="cat_burger">
+      <div className="cat_menu_title">
+        categories
+        {/* <div className="cat_burger">
           <span></span>
           <span></span>
           <span></span>
-        </div>
-        <div className="cat_menu_text">categories</div>
+        </div> */}
+        {/* <div className="cat_menu_text">categories</div> */}
       </div>
 
       <ul className="cat_menu">{items}</ul>

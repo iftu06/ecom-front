@@ -4,7 +4,7 @@ import styles from "./Cart.module.css";
 
 const ProductCart = () => {
   return (
-    <section className={styles["product-cart"]}>
+    <section className={`${styles["product-cart"]} ${styles["cart-open"]}`}>
       <div className="h-100 h-custom">
         <div className="container h-100">
           <div className="row d-flex justify-content-center align-items-center h-100">

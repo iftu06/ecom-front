@@ -33,12 +33,21 @@
   }
 }
 
+
 .product-cart {
   position: fixed;
   right: 0;
   top: 0;
   z-index: 99;
   width: 35%;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.cart-open {
+  visibility: visible;
+  opacity: 1;
+  /* right: -750px; */
 }
 
 .cart-container {

@@ -1,10 +1,21 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 import styles from "./Cart.module.css";
 
 const ProductCart = () => {
+  const isCartVisible: boolean = useSelector(
+    (state: any) => state?.cart?.isCartVisible
+  );
+
+  console.log("visible cart " + isCartVisible);
+
   return (
-    <section className={`${styles["product-cart"]} ${styles["cart-open"]}`}>
+    <section
+      className={`${styles["product-cart"]} ${
+        isCartVisible && styles["cart-open"]
+      } `}
+    >
       <div className="h-100 h-custom">
         <div className="container h-100">
           <div className="row d-flex justify-content-center align-items-center h-100">

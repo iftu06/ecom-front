@@ -2,8 +2,13 @@ import React, { useState } from "react";
 import { Product } from "./product";
 import CustomModal from "../common/custom-modal";
 import ProductModal from "./product-modal";
+import { useDispatch } from "react-redux";
+import CartItem from "../cart/cart_item";
+import { cartActions } from "../cart/cart-reducer";
 
-const ProductItem = (props: Product) => {
+const ProductItem = (props: any) => {
+  const product: Product = props;
+  const dispatch = useDispatch();
   const [isModalOpen, openModal] = useState(false);
 
   const hideModal = () => {
@@ -14,11 +19,26 @@ const ProductItem = (props: Product) => {
     openModal(true);
   };
 
+  const addItemToCartHandler = (quantity: number, price: number) => {
+    const cartItem: CartItem = {
+      productId: product.id,
+      name: props.name,
+      quantity: quantity,
+      price: price,
+    };
+    console.log(cartItem);
+    openModal(false);
+    dispatch(cartActions.addItemToCart(cartItem));
+  };
+
   return (
     <React.Fragment>
       <CustomModal
         render={() => (
-          <ProductModal name={props.name} image={props.image}></ProductModal>
+          <ProductModal
+            product={product}
+            addItemToCartHandler={addItemToCartHandler}
+          ></ProductModal>
         )}
         modalHeader="Add Product"
         show={isModalOpen}
@@ -30,10 +50,10 @@ const ProductItem = (props: Product) => {
           <img src={props.image} alt="" />
         </div>
         <div className="product_content">
-          <div className="product_price">${props.price}</div>
+          <div className="product_price">${product.price}</div>
           <div className="product_name">
             <div>
-              <a href="product.html">{props.name}</a>
+              <a href="product.html">{product.name}</a>
             </div>
           </div>
           <div className="product_extras">

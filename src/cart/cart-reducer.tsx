@@ -7,11 +7,13 @@ interface CartInitial {
   totQauntity: number;
   items: CartItem[];
   totalPrice: number;
+  isCartVisible: boolean;
 }
 const initialState: CartInitial = {
   totQauntity: 0,
   items: [],
   totalPrice: 0,
+  isCartVisible: false,
 };
 
 const cartSlice = createSlice({
@@ -32,13 +34,13 @@ const cartSlice = createSlice({
       state.totalPrice = state.totalPrice - existingItem.price;
     },
     removeItemFromCart(state, action) {
-     
+      const removedItemId = action.payload;
       const existingItem: CartItem = state.items.find(
-        (item: CartItem) => item.id == action.payload.id
+        (item: CartItem) => item.id == removedItemId
       )!;
       const itemIndx = state.items.indexOf(existingItem);
       if (existingItem.quantity == 1) {
-        state.items.slice(itemIndx);
+        state.items = state.items.filter((item) => item.id != removedItemId);
       } else {
         existingItem.quantity--;
         state.items[itemIndx] = existingItem;
@@ -46,5 +48,12 @@ const cartSlice = createSlice({
       state.totQauntity--;
       //state.totalPrice = state.totalPrice - existingItem.price;
     },
+    toggleCart(state) {
+      state.isCartVisible = !state.isCartVisible;
+    },
   },
 });
+
+export const cartActions = cartSlice.actions;
+
+export default cartSlice;

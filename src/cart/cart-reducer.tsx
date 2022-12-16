@@ -22,16 +22,17 @@ const cartSlice = createSlice({
   reducers: {
     addItemToCart(state, action) {
       const newItem: CartItem = action.payload;
+
       const existingItem: CartItem = state.items.find(
         (item: CartItem) => item.id == newItem.id
       )!;
       if (!existingItem) {
-        state.items.push(existingItem);
+        state.items.push(newItem);
       } else {
         existingItem.quantity++;
       }
-      state.totQauntity--;
-      state.totalPrice = state.totalPrice - existingItem.price;
+      state.totQauntity++;
+      state.totalPrice = state.totalPrice + newItem.price;
     },
     removeItemFromCart(state, action) {
       const removedItemId = action.payload;
@@ -43,13 +44,37 @@ const cartSlice = createSlice({
         state.items = state.items.filter((item) => item.id != removedItemId);
       } else {
         existingItem.quantity--;
-        state.items[itemIndx] = existingItem;
       }
       state.totQauntity--;
-      //state.totalPrice = state.totalPrice - existingItem.price;
+      state.totalPrice = state.totalPrice - existingItem.price;
     },
     toggleCart(state) {
       state.isCartVisible = !state.isCartVisible;
+    },
+    increaseCartQuantByOne(state, action) {
+      const itemdIdToIncrease = action.payload;
+      const itemToIncrease: CartItem = state.items.find(
+        (item) => item.id === itemdIdToIncrease
+      )!;
+      itemToIncrease.quantity++;
+      state.totQauntity++;
+      state.totalPrice = state.totalPrice + itemToIncrease.price;
+    },
+    decreaseCartQuantByOne(state, action) {
+      const itemdIdToDecrease = action.payload;
+      console.log("Item To Decrese  1111" + itemdIdToDecrease);
+      const itemToDecrease: CartItem = state.items.find(
+        (item) => item.id === itemdIdToDecrease
+      )!;
+      if (itemToDecrease.quantity > 1) {
+        itemToDecrease.quantity--;
+      } else {
+        state.items = state.items.filter(
+          (item) => item.id != itemdIdToDecrease
+        );
+      }
+      state.totQauntity--;
+      state.totalPrice = state.totalPrice - itemToDecrease.price;
     },
   },
 });

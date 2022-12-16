@@ -20,13 +20,14 @@ const ProductItem = (props: any) => {
   };
 
   const addItemToCartHandler = (quantity: number, price: number) => {
+    let cartItemId: string = product.id.toString();
     const cartItem: CartItem = {
+      id: cartItemId,
       productId: product.id,
       name: props.name,
       quantity: quantity,
       price: price,
     };
-    console.log(cartItem);
     openModal(false);
     dispatch(cartActions.addItemToCart(cartItem));
   };

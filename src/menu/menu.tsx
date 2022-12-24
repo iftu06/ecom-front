@@ -6,12 +6,14 @@ const Menu = (props: any) => {
   return (
     <React.Fragment>
       <div className="row">
-        <div className="col-md-4">
+        {/* <div className="col-md-12"> */}
+        <div style={{ width: '15%' }}>
           <Categories />
         </div>
-        <div className="col-md-8">
+        <div style={{ width: '85%' }}>
           <MenuProducts />
         </div>
+        {/* </div> */}
       </div>
     </React.Fragment>
   );

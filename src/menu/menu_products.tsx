@@ -29,7 +29,7 @@ const products: Product[] = [
 const MenuProducts = (props: any) => {
   return (
     <React.Fragment>
-            {products.map((product) => {
+      {/* {products.map((product) => {
               return (
                 <ProductItem
                   key={product.id}
@@ -39,7 +39,8 @@ const MenuProducts = (props: any) => {
                   price={product.price}
                 />
               );
-            })}
+            })} */}
+      <ProductItem />
     </React.Fragment>
   );
 };

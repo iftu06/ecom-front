@@ -20,6 +20,7 @@ import { useSelector } from 'react-redux';
 import { Redirect, Route, Switch } from "react-router-dom";
 import Menu from "./menu/menu";
 import ProductCart from "./product/productCart";
+import ProductCheckout from "./product/productCheckout";
 
 function App() {
   return (
@@ -34,6 +35,9 @@ function App() {
         </Route>
         <Route path="/menu">
           <Menu />
+        </Route>
+        <Route path="/checkout">
+          <ProductCheckout />
         </Route>
       </Switch>
       <ProductCart />

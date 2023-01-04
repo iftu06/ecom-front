@@ -121,3 +121,88 @@
     width: 98%;
     height: 3rem;
 }
+
+
+/* start checkout page */
+
+.section-padding-80 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.mt-50 {
+    margin-top: 50px !important;
+}
+
+.mb-30 {
+    margin-bottom: 30px !important;
+}
+
+.checkout_details_area form label {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.checkout_details_area form .form-control {
+    height: 42px;
+    border: 1px solid #ebebeb;
+    background-color: transparent;
+    border-radius: 0;
+}
+
+.order-details-confirmation {
+    width: 100%;
+    border: 2px solid #ebebeb;
+    padding: 40px;
+}
+
+.order-details-confirmation .order-details-form li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 0;
+    font-size: 13px;
+    text-transform: uppercase;
+    padding: 20px 0;
+    border-bottom: 2px solid #ebebeb;
+    font-weight: 700;
+}
+
+.order-details-confirmation .card {
+    border: none;
+}
+
+.order-details-confirmation .card-header {
+    background-color: transparent;
+    border-bottom: none;
+}
+
+.order-details-confirmation .card-header h6 a {
+    display: block;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.order-details-confirmation .card-header h6 a i {
+    color: #9f9f9f;
+}
+
+.order-details-confirmation .card-body p {
+    font-size: 12px;
+    line-height: 2;
+    color: #9f9f9f;
+}
+
+.checkout_details_area {
+    text-align: left;
+}
+
+/* end checkout page */

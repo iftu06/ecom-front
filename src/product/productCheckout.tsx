@@ -5,11 +5,112 @@ const ProductCheckout = (props: any) => {
     <React.Fragment>
 
       <div className="checkout_area section-padding-80">
-        <div className="container">
+        <div className="container-fluid cart_container">
           <div className="row">
+            <div className="col-12 col-md-6">
+              <div className="cart_title">Shopping Cart</div>
+
+              <div className="pb-5">
+                <div className="container">
+                  <div className="row">
+                    <div className="col-lg-12 p-5 bg-white rounded shadow-sm mb-5">
+
+                      <div className="table-responsive">
+                        <table className="table">
+                          <thead>
+                            <tr>
+                              <th scope="col" className="border-0 bg-light">
+                                <div className="p-2 px-3 text-uppercase">Product</div>
+                              </th>
+                              <th scope="col" className="border-0 bg-light">
+                                <div className="py-2 text-uppercase">Price</div>
+                              </th>
+                              <th scope="col" className="border-0 bg-light">
+                                <div className="py-2 text-uppercase">Quantity</div>
+                              </th>
+                              <th scope="col" className="border-0 bg-light">
+                                <div className="py-2 text-uppercase">Remove</div>
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row" className="border-0">
+                                <div className="p-2 text-start">
+                                  <img src="https://bootstrapious.com/i/snippets/sn-cart/product-1.jpg" alt="" width="70" className="img-fluid rounded shadow-sm me-2" />
+                                  <div className="ml-3 d-inline-block align-middle">
+                                    <h5 className="mb-0"> <a href="#" className="text-dark d-inline-block align-middle">Timex Unisex Originals</a></h5><span className="text-muted font-weight-normal font-italic d-block">Category: Watches</span>
+                                  </div>
+                                </div>
+                              </th>
+                              <td className="border-0 align-middle"><strong>79.00</strong></td>
+                              <td className="border-0 align-middle  w-25">
+                                <input type="number" className="form-control" id="qty" value="" />
+                              </td>
+                              <td className="border-0 align-middle"><a href="#" className="text-dark"><i className="fa fa-trash"></i></a></td>
+                            </tr>
+                            <tr>
+                              <th scope="row">
+                                <div className="p-2 text-start">
+                                  <img src="https://bootstrapious.com/i/snippets/sn-cart/product-2.jpg" alt="" width="70" className="img-fluid rounded shadow-sm me-2" />
+                                  <div className="ml-3 d-inline-block align-middle">
+                                    <h5 className="mb-0"><a href="#" className="text-dark d-inline-block">Lumix camera lense</a></h5><span className="text-muted font-weight-normal font-italic">Category: Electronics</span>
+                                  </div>
+                                </div>
+                              </th>
+                              <td className="align-middle"><strong>79.00</strong></td>
+                              <td className="align-middle  w-25">
+                                <input type="number" className="form-control" id="qty" value="" />
+                              </td>
+                              <td className="align-middle"><a href="#" className="text-dark"><i className="fa fa-trash"></i></a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">
+                                <div className="p-2 text-start">
+                                  <img src="https://bootstrapious.com/i/snippets/sn-cart/product-3.jpg" alt="" width="70" className="img-fluid rounded shadow-sm me-2" />
+                                  <div className="ml-3 d-inline-block align-middle">
+                                    <h5 className="mb-0"> <a href="#" className="text-dark d-inline-block">Gray Nike running shoe</a></h5><span className="text-muted font-weight-normal font-italic">Category: Fashion</span>
+                                  </div>
+                                </div>
+                              </th>
+                              <td className="align-middle"><strong>79.00</strong></td>
+                              <td className="align-middle  w-25">
+                                <input type="number" className="form-control" id="qty" value="" />
+                              </td>
+                              <td className="align-middle"><a href="#" className="text-dark"><i className="fa fa-trash"></i></a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="row py-5 p-4 bg-white rounded shadow-sm">
+                    <div className="col-lg-12">
+                      <div className="bg-secondary text-white rounded-pill px-4 py-3 text-uppercase font-weight-bold">Order summary </div>
+                      <div className="p-4">
+                        <p className="font-italic mb-4">Shipping and additional costs are calculated based on values you have entered.</p>
+                        <ul className="list-unstyled mb-4">
+                          <li className="d-flex justify-content-between py-3 border-bottom"><strong className="text-muted">Order Subtotal </strong><strong>390.00</strong></li>
+                          <li className="d-flex justify-content-between py-3 border-bottom"><strong className="text-muted">Shipping and handling</strong><strong>10.00</strong></li>
+                          <li className="d-flex justify-content-between py-3 border-bottom"><strong className="text-muted">Tax</strong><strong>0.00</strong></li>
+                          <li className="d-flex justify-content-between py-3 border-bottom"><strong className="text-muted">Total</strong>
+                            <h5 className="font-weight-bold">400.00</h5>
+                          </li>
+                        </ul><a href="#" className="btn btn-dark rounded-pill py-2 btn-block">Procceed to checkout</a>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
 
             <div className="col-12 col-md-6">
-              <div className="checkout_details_area mt-50 clearfix">
+
+              <div className="checkout_details_area mt-50 clearfix py-5 p-4 bg-white rounded shadow-sm">
 
                 <div className="cart-page-heading mb-30">
                   <h5>Billing Address</h5>
@@ -30,18 +131,18 @@ const ProductCheckout = (props: any) => {
                       <input type="text" className="form-control" id="company" value="" />
                     </div>
                     {/* <div className="col-12 mb-3">
-                      <label htmlFor="country">Country <span>*</span></label>
-                      <select className="w-100" id="country" >
-                        <option value="usa">United States</option>
-                        <option value="uk">United Kingdom</option>
-                        <option value="ger">Germany</option>
-                        <option value="fra">France</option>
-                        <option value="ind">India</option>
-                        <option value="aus">Australia</option>
-                        <option value="bra">Brazil</option>
-                        <option value="cana">Canada</option>
-                      </select><div className="nice-select w-100" tabIndex={0}><span className="current">United States</span><ul className="list"><li data-value="usa" className="option selected">United States</li><li data-value="uk" className="option">United Kingdom</li><li data-value="ger" className="option">Germany</li><li data-value="fra" className="option">France</li><li data-value="ind" className="option">India</li><li data-value="aus" className="option">Australia</li><li data-value="bra" className="option">Brazil</li><li data-value="cana" className="option">Canada</li></ul></div>
-                    </div> */}
+      <label htmlFor="country">Country <span>*</span></label>
+      <select className="w-100" id="country" >
+        <option value="usa">United States</option>
+        <option value="uk">United Kingdom</option>
+        <option value="ger">Germany</option>
+        <option value="fra">France</option>
+        <option value="ind">India</option>
+        <option value="aus">Australia</option>
+        <option value="bra">Brazil</option>
+        <option value="cana">Canada</option>
+      </select><div className="nice-select w-100" tabIndex={0}><span className="current">United States</span><ul className="list"><li data-value="usa" className="option selected">United States</li><li data-value="uk" className="option">United Kingdom</li><li data-value="ger" className="option">Germany</li><li data-value="fra" className="option">France</li><li data-value="ind" className="option">India</li><li data-value="aus" className="option">Australia</li><li data-value="bra" className="option">Brazil</li><li data-value="cana" className="option">Canada</li></ul></div>
+    </div> */}
                     <div className="col-12 mb-3">
                       <label htmlFor="street_address">Address <span>*</span></label>
                       <input type="text" className="form-control mb-3" id="street_address" value="" />
@@ -86,82 +187,6 @@ const ProductCheckout = (props: any) => {
                     </div>
                   </div>
                 </form>
-              </div>
-            </div>
-
-            <div className="col-12 col-md-6 col-lg-5 ml-lg-auto">
-              <div className="order-details-confirmation">
-
-                <div className="cart-page-heading">
-                  <h5>Your Order</h5>
-                  <p>The Details</p>
-                </div>
-
-                <ul className="order-details-form mb-4">
-                  <li><span>Product</span> <span>Total</span></li>
-                  <li><span>Cocktail Yellow dress</span> <span>59.90 BDT</span></li>
-                  <li><span>Subtotal</span> <span>59.90 BDT</span></li>
-                  <li><span>Shipping</span> <span>Free</span></li>
-                  <li><span>Total</span> <span>59.90 BDT</span></li>
-                </ul>
-
-                <div id="accordion" role="tablist" className="mb-4">
-                  <div className="card">
-                    <div className="card-header" role="tab" id="headingOne">
-                      <h6 className="mb-0">
-                        <a data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne"><i className="fa fa-circle-o mr-3"></i>Paypal</a>
-                      </h6>
-                    </div>
-
-                    <div id="collapseOne" className="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
-                      <div className="card-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra
-                          tempor so dales. Phasellus sagittis auctor gravida. Integ er bibendum
-                          sodales arcu id te mpus. Ut consectetur lacus.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="card">
-                    <div className="card-header" role="tab" id="headingTwo">
-                      <h6 className="mb-0">
-                        <a className="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><i className="fa fa-circle-o mr-3"></i>cash on delievery</a>
-                      </h6>
-                    </div>
-                    <div id="collapseTwo" className="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
-                      <div className="card-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo quis in
-                          veritatis officia inventore, tempore provident dignissimos.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="card">
-                    <div className="card-header" role="tab" id="headingThree">
-                      <h6 className="mb-0">
-                        <a className="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><i className="fa fa-circle-o mr-3"></i>credit card</a>
-                      </h6>
-                    </div>
-                    <div id="collapseThree" className="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
-                      <div className="card-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse quo sint
-                          repudiandae suscipit ab soluta delectus voluptate, vero vitae</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="card">
-                    <div className="card-header" role="tab" id="headingFour">
-                      <h6 className="mb-0">
-                        <a className="collapsed" data-toggle="collapse" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour"><i className="fa fa-circle-o mr-3"></i>direct bank transfer</a>
-                      </h6>
-                    </div>
-                    <div id="collapseFour" className="collapse show" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
-                      <div className="card-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est cum autem
-                          eveniet saepe fugit, impedit magni.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <button className="btn btn-primary">Place Order</button>
               </div>
             </div>
           </div>

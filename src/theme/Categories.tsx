@@ -69,10 +69,10 @@ const Categories = () => {
         <li><a href="#">Cameras & Photos<i className="fas fa-chevron-right"></i></a></li>
         <li className="hassubs">
           <a href="#">Hardware<i className="fas fa-chevron-right"></i></a>
-          <ul>
+          <ul className="submenu-show"> {/*to see submenu add css class 'submenu-show' */}
             <li className="hassubs">
               <a href="#">Menu Item<i className="fas fa-chevron-right"></i></a>
-              <ul>
+              {/* <ul>
                 <li><a href="#">Menu Item<i
                   className="fas fa-chevron-right"></i></a></li>
                 <li><a href="#">Menu Item<i
@@ -81,7 +81,7 @@ const Categories = () => {
                   className="fas fa-chevron-right"></i></a></li>
                 <li><a href="#">Menu Item<i
                   className="fas fa-chevron-right"></i></a></li>
-              </ul>
+              </ul> */}
             </li>
             <li><a href="#">Menu Item<i className="fas fa-chevron-right"></i></a></li>
             <li><a href="#">Menu Item<i className="fas fa-chevron-right"></i></a></li>

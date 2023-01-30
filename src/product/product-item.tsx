@@ -127,6 +127,10 @@ const ProductItem = (props: any) => {
               <li className="product_mark product_discount">-25%</li>
               <li className="product_mark product_new">new</li>
             </ul>
+
+            <button className="btn btn-outline-primary btn-sm mt-2">
+              Add To Cart
+            </button>
           </div>
 
           {/* <!-- Product Item --> */}
@@ -142,6 +146,10 @@ const ProductItem = (props: any) => {
               <li className="product_mark product_discount">-25%</li>
               <li className="product_mark product_new">new</li>
             </ul>
+
+            <button className="btn btn-outline-primary btn-sm mt-2">
+              Add To Cart
+            </button>
           </div>
 
           {/* <!-- Product Item --> */}
@@ -157,6 +165,10 @@ const ProductItem = (props: any) => {
               <li className="product_mark product_discount">-25%</li>
               <li className="product_mark product_new">new</li>
             </ul>
+
+            <button className="btn btn-outline-primary btn-sm mt-2">
+              Add To Cart
+            </button>
           </div>
 
           {/* <!-- Product Item --> */}
@@ -172,6 +184,10 @@ const ProductItem = (props: any) => {
               <li className="product_mark product_discount">-25%</li>
               <li className="product_mark product_new">new</li>
             </ul>
+
+            <button className="btn btn-outline-primary btn-sm mt-2">
+              Add To Cart
+            </button>
           </div>
 
           {/* <!-- Product Item --> */}
@@ -187,6 +203,10 @@ const ProductItem = (props: any) => {
               <li className="product_mark product_discount">-25%</li>
               <li className="product_mark product_new">new</li>
             </ul>
+
+            <button className="btn btn-outline-primary btn-sm mt-2">
+              Add To Cart
+            </button>
           </div>
 
           {/* <!-- Product Item --> */}
@@ -202,6 +222,10 @@ const ProductItem = (props: any) => {
               <li className="product_mark product_discount">-25%</li>
               <li className="product_mark product_new">new</li>
             </ul>
+
+            <button className="btn btn-outline-primary btn-sm mt-2">
+              Add To Cart
+            </button>
           </div>
 
           {/* <!-- Product Item --> */}
@@ -217,6 +241,10 @@ const ProductItem = (props: any) => {
               <li className="product_mark product_discount">-25%</li>
               <li className="product_mark product_new">new</li>
             </ul>
+
+            <button className="btn btn-outline-primary btn-sm mt-2">
+              Add To Cart
+            </button>
           </div>
 
           {/* <!-- Product Item --> */}
@@ -232,6 +260,10 @@ const ProductItem = (props: any) => {
               <li className="product_mark product_discount">-25%</li>
               <li className="product_mark product_new">new</li>
             </ul>
+
+            <button className="btn btn-outline-primary btn-sm mt-2">
+              Add To Cart
+            </button>
           </div>
 
           {/* <!-- Product Item --> */}
@@ -247,6 +279,10 @@ const ProductItem = (props: any) => {
               <li className="product_mark product_discount">-25%</li>
               <li className="product_mark product_new">new</li>
             </ul>
+
+            <button className="btn btn-outline-primary btn-sm mt-2">
+              Add To Cart
+            </button>
           </div>
 
           {/* <!-- Product Item --> */}
@@ -262,6 +298,10 @@ const ProductItem = (props: any) => {
               <li className="product_mark product_discount">-25%</li>
               <li className="product_mark product_new">new</li>
             </ul>
+
+            <button className="btn btn-outline-primary btn-sm mt-2">
+              Add To Cart
+            </button>
           </div>
 
           {/* <!-- Product Item --> */}
@@ -277,6 +317,10 @@ const ProductItem = (props: any) => {
               <li className="product_mark product_discount">-25%</li>
               <li className="product_mark product_new">new</li>
             </ul>
+
+            <button className="btn btn-outline-primary btn-sm mt-2">
+              Add To Cart
+            </button>
           </div>
 
           {/* <!-- Product Item --> */}
@@ -292,6 +336,10 @@ const ProductItem = (props: any) => {
               <li className="product_mark product_discount">-25%</li>
               <li className="product_mark product_new">new</li>
             </ul>
+
+            <button className="btn btn-outline-primary btn-sm mt-2">
+              Add To Cart
+            </button>
           </div>
 
           {/* <!-- Product Item --> */}
@@ -307,6 +355,10 @@ const ProductItem = (props: any) => {
               <li className="product_mark product_discount">-25%</li>
               <li className="product_mark product_new">new</li>
             </ul>
+
+            <button className="btn btn-outline-primary btn-sm mt-2">
+              Add To Cart
+            </button>
           </div>
 
           {/* <!-- Product Item --> */}
@@ -322,6 +374,10 @@ const ProductItem = (props: any) => {
               <li className="product_mark product_discount">-25%</li>
               <li className="product_mark product_new">new</li>
             </ul>
+
+            <button className="btn btn-outline-primary btn-sm mt-2">
+              Add To Cart
+            </button>
           </div>
 
           {/* <!-- Product Item --> */}
@@ -337,6 +393,10 @@ const ProductItem = (props: any) => {
               <li className="product_mark product_discount">-25%</li>
               <li className="product_mark product_new">new</li>
             </ul>
+
+            <button className="btn btn-outline-primary btn-sm mt-2">
+              Add To Cart
+            </button>
           </div>
 
           {/* <!-- Product Item --> */}
@@ -352,6 +412,10 @@ const ProductItem = (props: any) => {
               <li className="product_mark product_discount">-25%</li>
               <li className="product_mark product_new">new</li>
             </ul>
+
+            <button className="btn btn-outline-primary btn-sm mt-2">
+              Add To Cart
+            </button>
           </div>
 
           {/* <!-- Product Item --> */}
@@ -367,6 +431,10 @@ const ProductItem = (props: any) => {
               <li className="product_mark product_discount">-25%</li>
               <li className="product_mark product_new">new</li>
             </ul>
+
+            <button className="btn btn-outline-primary btn-sm mt-2">
+              Add To Cart
+            </button>
           </div>
 
           {/* <!-- Product Item --> */}
@@ -382,6 +450,10 @@ const ProductItem = (props: any) => {
               <li className="product_mark product_discount">-25%</li>
               <li className="product_mark product_new">new</li>
             </ul>
+
+            <button className="btn btn-outline-primary btn-sm mt-2">
+              Add To Cart
+            </button>
           </div>
 
           {/* <!-- Product Item --> */}
@@ -397,6 +469,10 @@ const ProductItem = (props: any) => {
               <li className="product_mark product_discount">-25%</li>
               <li className="product_mark product_new">new</li>
             </ul>
+
+            <button className="btn btn-outline-primary btn-sm mt-2">
+              Add To Cart
+            </button>
           </div>
 
           {/* <!-- Product Item --> */}
@@ -412,6 +488,10 @@ const ProductItem = (props: any) => {
               <li className="product_mark product_discount">-25%</li>
               <li className="product_mark product_new">new</li>
             </ul>
+
+            <button className="btn btn-outline-primary btn-sm mt-2">
+              Add To Cart
+            </button>
           </div>
 
         </div>

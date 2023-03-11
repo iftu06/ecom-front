@@ -6,8 +6,13 @@ import CustomModal from "../common/custom-modal";
 import SignIn from "../auth/sign-in";
 import SignUp from "../auth/sign-up";
 import { cartActions } from "../cart/cart-reducer";
+import CommonService from "../common/service/commoun-service";
+import AuthService from "../common/service/auth-service";
 
 const NavBar = () => {
+  const commonService = new CommonService();
+  const authSerive: AuthService = new AuthService();
+
   const dispatch = useDispatch();
 
   const isAuthenticated: boolean = useSelector(
@@ -36,6 +41,14 @@ const NavBar = () => {
 
   const showSignInModal = () => {
     dispatch(authActions.showSignInModal());
+  };
+
+  const login = () => {
+    authSerive.login(window.location.href);
+  };
+
+  const logout = () => {
+    authSerive.logout();
   };
 
   const hideSignUpModal = () => {
@@ -101,16 +114,23 @@ const NavBar = () => {
 
         {!isAuthenticated && (
           <li>
-            <a href="#" onClick={showSignInModal}>
-              Sign in
+            <a href="#" onClick={login}>
+              Log In
             </a>
           </li>
         )}
 
         {isAuthenticated && (
-          <li>
-            <a href="#">Sign Out</a>
-          </li>
+          <form action="/logout" method="POST">
+            <button type="submit" color="secondary">
+              Logout
+            </button>
+          </form>
+          // <li>
+          //   <a href="#" onClick={logout}>
+          //     Log Out
+          //   </a>
+          // </li>
         )}
       </ul>
     </div>

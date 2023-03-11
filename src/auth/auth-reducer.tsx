@@ -4,16 +4,19 @@ const initialAuthState = {
   isAuthenticated: false,
   isSignInModalOpen: false,
   isSignUpModalOpen: false,
+  account: null,
 };
 const authSlice = createSlice({
   name: "auth",
   initialState: initialAuthState,
   reducers: {
-    login(state) {
+    login(state, action) {
       state.isAuthenticated = true;
+      state.account = action.payload;
     },
     logout(state) {
       state.isAuthenticated = false;
+      state.account = null;
     },
     showSignInModal(state) {
       state.isSignInModalOpen = true;

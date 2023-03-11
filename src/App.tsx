@@ -16,11 +16,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Trends from "./theme/Adverts";
 import Reviews from "./theme/Reviews";
 import Home from "./home/home";
-import { useSelector } from 'react-redux';
+import { useSelector } from "react-redux";
 import { Redirect, Route, Switch } from "react-router-dom";
 import Menu from "./menu/menu";
 import ProductCart from "./product/productCart";
 import ProductCheckout from "./product/productCheckout";
+import Login from "./auth/login";
 
 function App() {
   return (
@@ -32,6 +33,9 @@ function App() {
         </Route>
         <Route path="/home">
           <Home />
+        </Route>
+        <Route path="/authenticate">
+          <Login />
         </Route>
         <Route path="/menu">
           <Menu />

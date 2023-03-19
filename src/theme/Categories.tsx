@@ -1,54 +1,82 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { Category } from "../category/category";
-const categories: Category[] = [
-  {
-    name: "Computers & Laptops",
-    class: "fas fa-chevron-right ms-auto",
-  },
-  {
-    name: "Cameras & Photos",
-    class: "fas fa-chevron-right",
-  },
-  {
-    name: "Smartphones & Tablets",
-    class: "fas fa-chevron-right",
-  },
-  {
-    name: "TV & Audio",
-    class: "fas fa-chevron-right",
-  },
-  {
-    name: "Gadgets",
-    class: "fas fa-chevron-right",
-  },
-  {
-    name: "Car Electronics",
-    class: "fas fa-chevron-right",
-  },
-  {
-    name: "Video Games & Consoles",
-    class: "fas fa-chevron-right",
-  },
-  {
-    name: "Accessories",
-    class: "fas fa-chevron-right",
-  },
-];
-
+// const categories: Category[] = [
+//   {
+//     name: "Computers & Laptops",
+//     class: "fas fa-chevron-right ms-auto",
+//   },
+//   {
+//     name: "Cameras & Photos",
+//     class: "fas fa-chevron-right",
+//   },
+//   {
+//     name: "Smartphones & Tablets",
+//     class: "fas fa-chevron-right",
+//   },
+//   {
+//     name: "TV & Audio",
+//     class: "fas fa-chevron-right",
+//   },
+//   {
+//     name: "Gadgets",
+//     class: "fas fa-chevron-right",
+//   },
+//   {
+//     name: "Car Electronics",
+//     class: "fas fa-chevron-right",
+//   },
+//   {
+//     name: "Video Games & Consoles",
+//     class: "fas fa-chevron-right",
+//   },
+//   {
+//     name: "Accessories",
+//     class: "fas fa-chevron-right",
+//   },
+// ];
+let categories: Category[];
 const Categories = () => {
-  const items = categories.map((category) => {
+  // const items = categories.map((category) => {
+  //   return (
+  //     <React.Fragment>
+  //       <li>
+  //         <a href="#">
+  //           {category.name} <i className={category.class}></i>
+  //         </a>
+  //       </li>
+
+  //     </React.Fragment>
+  //   );
+  // });
+
+  const [categoryList, setcategories] = useState<any[]>([]);
+
+  const getCategories = async () => {
+    const response = await axios.get(
+      "http://localhost:8095/webstore/categories"
+    );
+    categories = await response.data.responseBody;
+    console.log('print cat: ', categories);
+    return categories;
+  };
+  useEffect(() => {
+    const categ = getCategories();
+    // setcategories(categ);
+  }, []);
+
+  const catMenu = categories?.map((category: any) => {
     return (
       <React.Fragment>
         <li>
           <a href="#">
-            {category.name} <i className={category.class}></i>
+            {category.name} <i className="fas fa-chevron-right ml-auto"></i>
           </a>
         </li>
 
       </React.Fragment>
     );
   });
-
   return (
     <div className="cat_menu_container">
       <div className="cat_menu_title">
@@ -64,6 +92,7 @@ const Categories = () => {
       {/* <ul className="cat_menu">{items}</ul> */}
 
       <ul className="cat_menu">
+        {catMenu}
         <li><a href="#">Computers & Laptops <i
           className="fas fa-chevron-right ml-auto"></i></a></li>
         <li><a href="#">Cameras & Photos<i className="fas fa-chevron-right"></i></a></li>

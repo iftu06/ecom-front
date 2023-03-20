@@ -3,5 +3,6 @@ export interface Category {
   name?: string;
   description?: string;
   image?: string;
-  class? : string;
+  class?: string;
+  child?: Category[];
 }

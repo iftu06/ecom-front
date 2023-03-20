@@ -66,6 +66,24 @@ const Categories = () => {
     // setcategories(categ);
   }, []);
 
+  const submenuToggle = (categoryId: number) => {
+    // const selectedCategory : Category = categoryList.filter(
+    //   (category) => category.id == categoryId
+    // );
+
+    //let cloneCategory = {...selectedCategory};
+    //cloneCategory.class = 'has-sub';
+
+    // find index of cloneCategory
+    // 2
+
+    //categoryList[index] = cloneCategory;
+
+
+    // selectedCategory.class == '' ? 'has-sub' : '';
+    // categoryList.push(selectedCategory);
+  };
+
   // const catMenu = categories?.map((category: any) => {
   //   return (
   //     <React.Fragment>
@@ -95,7 +113,10 @@ const Categories = () => {
         {/* {catMenu} */}
         {categoryList.map((category) => {
           return (
-            <li>
+            <li
+              className={category.class}
+              onClick={() => submenuToggle(category.id!)}
+            >
               <a href="#">
                 {category.name} <i className="fas fa-chevron-right ml-auto"></i>
               </a>

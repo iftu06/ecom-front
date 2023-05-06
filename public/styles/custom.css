@@ -217,7 +217,7 @@
 
 /* end checkout page */
 
-.submenu-show {
+.active-submenu .submenu-show {
     opacity: 1 !important;
     display: block !important;
 }

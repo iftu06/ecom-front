@@ -7,24 +7,24 @@ import Slider from "react-slick";
 const products: Product[] = [
   {
     id: 1,
-    name: "Nokia 3310(2017)",
-    image: "images/new_6.jpg",
+    productName: "Nokia 3310(2017)",
+    previewImage: "images/new_6.jpg",
     price: 379,
-    description: "some",
+    productDescription: "some",
   },
   {
     id: 2,
-    name: "Huawei MediaPad",
-    image: "images/new_8.jpg",
+    productName: "Huawei MediaPad",
+    previewImage: "images/new_8.jpg",
     price: 225,
-    description: "some",
+    productDescription: "some",
   },
   {
     id: 3,
-    name: "Huawei MediaPad",
-    image: "images/new_1.jpg",
+    productName: "Huawei MediaPad",
+    previewImage: "images/new_1.jpg",
     price: 225,
-    description: "some",
+    productDescription: "some",
   },
 ];
 
@@ -78,8 +78,8 @@ const NewArrival = () => {
                               <ProductItem
                                 key={product.id}
                                 id={product.id}
-                                name={product.name}
-                                image={product.image}
+                                name={product.productName}
+                                image={product.previewImage}
                                 price={product.price}
                               />
                             );

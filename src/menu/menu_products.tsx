@@ -1,32 +1,49 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { Category } from "../category/category";
 import { Product } from "../product/product";
 import ProductItem from "../product/product-item";
 
 const products: Product[] = [
   {
     id: 1,
-    name: "Nokia 3310(2017)",
-    image: "images/new_6.jpg",
+    productName: "Nokia 3310(2017)",
+    previewImage: "images/new_6.jpg",
     price: 379,
-    description: "some",
+    productDescription: "some",
   },
   {
     id: 2,
-    name: "Huawei MediaPad",
-    image: "images/new_8.jpg",
+    productName: "Huawei MediaPad",
+    previewImage: "images/new_8.jpg",
     price: 225,
-    description: "some",
+    productDescription: "some",
   },
   {
     id: 3,
-    name: "Huawei MediaPad",
-    image: "images/new_1.jpg",
+    productName: "Huawei MediaPad",
+    previewImage: "images/new_1.jpg",
     price: 225,
-    description: "some",
+    productDescription: "some",
   },
 ];
 
+let productss: Product[];
 const MenuProducts = (props: any) => {
+
+  const [productList, setProducts] = useState<Product[]>([]);
+  const getProducts = async () => {
+    const response = await axios.get(
+      "http://localhost:8095/webstore/category/1/products"
+    );
+    productss = await response.data.responseBody;
+    console.log("print product: ", productss);
+    setProducts(productss);
+  };
+  useEffect(() => {
+    getProducts();
+  }, []);
+
   return (
     <React.Fragment>
       <div className="shop_content">
@@ -72,8 +89,19 @@ const MenuProducts = (props: any) => {
               <ProductItem
                 key={product.id}
                 id={product.id}
-                name={product.name}
-                image={product.image}
+                productName={product.productName}
+                previewImage={product.previewImage}
+                price={product.price}
+              />
+            );
+          })}
+          {productss?.map((product) => {
+            return (
+              <ProductItem
+                key={product.id}
+                id={product.id}
+                productName={product.productName}
+                previewImage={product.previewImage}
                 price={product.price}
               />
             );

@@ -39,7 +39,7 @@ const ProductModal = (props: any) => {
           <div className="col-lg-5 order-3">
             <div className="product_description">
               <div className="product_category">Laptops</div>
-              <div className="product_name">{product.name}</div>
+              <div className="product_name">{product.productName}</div>
               <div className="rating_r rating_r_4 product_rating">
                 <i></i>
                 <i></i>

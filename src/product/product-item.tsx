@@ -24,7 +24,7 @@ const ProductItem = (props: any) => {
     const cartItem: CartItem = {
       id: cartItemId,
       productId: product.id,
-      name: props.name,
+      name: props.productName,
       quantity: quantity,
       price: price,
     };
@@ -35,7 +35,7 @@ const ProductItem = (props: any) => {
   return (
     <React.Fragment>
       {/* need to add shop_styles for this module */}
-       <CustomModal
+      <CustomModal
         render={() => (
           <ProductModal
             product={product}
@@ -45,7 +45,7 @@ const ProductItem = (props: any) => {
         modalHeader="Add Product"
         show={isModalOpen}
         hideModal={hideModal}
-      ></CustomModal> 
+      ></CustomModal>
       {/* <div className="border_active"></div>
       <div className="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
         <div className="product_image d-flex flex-column align-items-center justify-content-center">
@@ -97,14 +97,14 @@ const ProductItem = (props: any) => {
       <div className="product_item is_new">
         <div className="product_border"></div>
         <div className="product_image d-flex flex-column align-items-center justify-content-center">
-          <img src={product.image} alt=""></img>
+          <img src={product.previewImage} alt=""></img>
         </div>
         <div className="product_content">
           <div className="product_price">{product.price}</div>
           <div className="product_name">
             <div>
               <a href="#" tabIndex={0}>
-                {product.name}
+                {product.productName}
               </a>
             </div>
           </div>
@@ -122,7 +122,7 @@ const ProductItem = (props: any) => {
         </button>
       </div>
 
-      
+
 
       {/* <!-- Shop Page Navigation --> */}
     </React.Fragment>
